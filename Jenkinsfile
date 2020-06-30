@@ -38,6 +38,7 @@ pipeline {
                echo "${params.Greeting} World!"
                 script {
                     def repo = checkout scm
+                    echo "${repo}"
                 }
             }
         }
