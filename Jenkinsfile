@@ -30,7 +30,7 @@ pipeline {
         }
         stage('print') {
             steps {
-               sh "${CC}"
+               echo "${CC}"
             }
         }
     }
