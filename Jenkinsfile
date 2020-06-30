@@ -30,7 +30,7 @@ pipeline {
         }
         stage('print') {
             steps {
-               sh 'printenv'
+               sh "${CC}"
             }
         }
     }
