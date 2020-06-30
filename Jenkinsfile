@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sh 'cat 123'
+               sh 'cat Dockerfile'
             }
         }
     }
