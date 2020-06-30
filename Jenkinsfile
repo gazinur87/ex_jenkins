@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. ${env.build_id}'
+                echo "Building.. ${env.build_id}"
             }
         }
         stage('Test') {
