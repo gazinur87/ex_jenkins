@@ -18,12 +18,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            sh 'asd'
+            sh 'asd || true'
             }
         }
         stage('Test') {
             steps {
-                sh "echo ${env.build_id}"
+                sh "echo ${currentBuild.result}"
             }
         }
         stage('Deploy') {
