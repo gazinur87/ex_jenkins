@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            sh 'asd'
+            sh 'asd || true'
             sh "echo ${currentBuild.result}"
             }
         }
