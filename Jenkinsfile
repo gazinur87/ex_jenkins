@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                cat 123
+               sh 'cat 123'
             }
         }
     }
