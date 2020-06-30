@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh "echo ${env.build_id}"
             }
         }
         stage('Deploy') {
             steps {
-               sh 'cat Dockerfile ${env.build_id}'
+               sh 'cat Dockerfile'
             }
         }
     }
