@@ -1,5 +1,8 @@
 pipeline {
     agent any
+      parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
     environment {
         // Using returnStdout
         CC = """${sh(
@@ -31,6 +34,7 @@ pipeline {
         stage('print') {
             steps {
                echo "${CC}"
+               echo "${params.Greeting} World!"
             }
         }
     }
