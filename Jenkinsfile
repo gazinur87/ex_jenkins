@@ -36,7 +36,9 @@ pipeline {
             steps {
                echo "${CC}"
                echo "${params.Greeting} World!"
-               def repo = checkout scm
+                script {
+                    def repo = checkout scm
+                }
             }
         }
     }
