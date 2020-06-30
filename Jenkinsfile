@@ -39,7 +39,7 @@ pipeline {
                 script {
                     def repo = checkout scm
                     echo "${repo}"
-                    echo repo.GIT_BRANCH.take(2)
+                    echo repo.GIT_BRANCH.take(20)
                 }
             }
         }
