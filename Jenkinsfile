@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building.. ${env.build_id}"
+            sh 'asd'
             }
         }
         stage('Test') {
