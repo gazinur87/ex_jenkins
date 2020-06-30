@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sh 'cat Dockerfile'
+               sh 'cat Dockerfile ${env.build_id}'
             }
         }
     }
