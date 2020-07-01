@@ -20,7 +20,7 @@ pipeline {
     stages {
         stage('test docker') {
             steps {
-            sh 'id'
+            sh 'whoami'
             }
         }
 
