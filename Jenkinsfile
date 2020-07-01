@@ -35,7 +35,7 @@ spec:
     stages {
         stage('test docker') {
             steps {
-            sh 'hostname'
+            sh 'whoami'
             }
         }
 
