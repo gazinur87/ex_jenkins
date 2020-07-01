@@ -1,6 +1,21 @@
 pipeline {
-    agent {
-        docker { image 'busybox' }
+  agent {
+        kubernetes {
+            label 'jenkins-pod'
+            defaultContainer 'busyBox1'
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+ name: busybox
+spec:
+ containers:
+ - image: busybox
+   imagePullPolicy: IfNotPresent
+   name: busyBox1
+   command: ["sleep", "10000"]
+"""
+        }
     }
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
