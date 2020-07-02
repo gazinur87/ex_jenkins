@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        dockerd { image 'busybox' }
+        docker { image 'busybox' }
     }
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
