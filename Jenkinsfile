@@ -2,6 +2,9 @@ pipeline {
     agent {
         docker { image 'busybox' }
     }
+    options {
+        skipDefaultCheckout true
+    }
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     // }
