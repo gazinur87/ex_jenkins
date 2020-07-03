@@ -1,8 +1,7 @@
 pipeline {
-     agent {
-        'any'
-    }
-    // agent {
+     agent any
+     
+     // agent {
     //     docker { image 'busybox' }
     // }
     //   parameters {
