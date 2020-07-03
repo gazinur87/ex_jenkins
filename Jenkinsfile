@@ -23,7 +23,7 @@ pipeline {
         stage('call') {
             steps {
                 echo "Hello World"
-                build job: './../subpipe'
+                build job: 'subpipe'
             }
         }
 
