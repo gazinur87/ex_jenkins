@@ -1,7 +1,10 @@
 pipeline {
-    agent {
-        docker { image 'busybox' }
+     agent {
+        any
     }
+    // agent {
+    //     docker { image 'busybox' }
+    // }
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     // }
@@ -18,9 +21,9 @@ pipeline {
     //         )}"""
     // }
     stages {
-        stage('test docker') {
+        stage('call') {
             steps {
-            sh 'whoami'
+                echo "Hello World"
             }
         }
 
