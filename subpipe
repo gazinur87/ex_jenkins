@@ -5,7 +5,6 @@ pipeline {
         stage('call') {
             steps {
                 echo "Hello World2"
-                build job: './subpipe'
             }
         }
     }
