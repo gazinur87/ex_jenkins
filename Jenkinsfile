@@ -1,5 +1,5 @@
 pipeline {
-     agent any
+     agent 'dockerL1'
      
      // agent {
     //     docker { image 'busybox' }
