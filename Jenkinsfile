@@ -1,9 +1,7 @@
 pipeline {
-     agent 'dockerL1'
-     
-     // agent {
-    //     docker { image 'busybox' }
-    // }
+     agent {
+        kubernetes { image 'busybox' }
+    }
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     // }
@@ -23,7 +21,7 @@ pipeline {
         stage('call') {
             steps {
                 echo "Hello World"
-                build job: 'subpipe'
+              //  build job: 'subpipe'
             }
         }
 
