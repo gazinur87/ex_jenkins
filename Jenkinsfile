@@ -1,7 +1,24 @@
 pipeline {
      agent {
-        kubernetes { image 'busybox' }
+        kubernetes {
+            label 'build-service-pod'
+            defaultContainer 'busybox'
+            yaml """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    job: build-service
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["cat"]
+    tty: true
+"""
+        }
     }
+
     //   parameters {
     //     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     // }
