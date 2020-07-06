@@ -1,21 +1,8 @@
 pipeline {
      agent {
         kubernetes {
-            label 'build-service-pod'
+            label 'kuber-pod-template'
             defaultContainer 'busybox'
-            yaml """
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    job: build-service
-spec:
-  containers:
-  - name: busybox
-    image: busybox
-    command: ["cat"]
-    tty: true
-"""
         }
     }
 
