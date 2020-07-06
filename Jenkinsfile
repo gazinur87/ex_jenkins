@@ -37,9 +37,9 @@ pipeline {
     stages {
         stage('call') {
             steps {
-               container('busybox') {
+   //            container('busybox') {
                    sh "hostname"
-                }
+ //               }
             }
         }
 
