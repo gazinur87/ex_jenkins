@@ -1,7 +1,7 @@
 pipeline {
      agent {
         kubernetes {
-            label 'kuber-pod-template'
+            label 'kuberL1'
             defaultContainer 'busybox'
         }
     }
