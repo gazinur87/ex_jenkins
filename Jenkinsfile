@@ -2,7 +2,6 @@ pipeline {
      agent {
         kubernetes {
             label 'kuberL1'
-            defaultContainer 'busybox'
         }
     }
 
@@ -24,9 +23,10 @@ pipeline {
     stages {
         stage('call') {
             steps {
-                echo "Hello World"
-              //  build job: 'subpipe'
-            }
+          container('busybox') {
+            echo "Hello World"
+          }
+        }
         }
 
         // stage('Build') {
