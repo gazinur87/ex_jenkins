@@ -1,6 +1,10 @@
 pipeline {
 	agent any
 	stages {
-		echo 123
+         steps {
+   //            container('busybox') {
+                   echo 123
+ //               }
+            }
 	}
 }
