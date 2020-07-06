@@ -1,7 +1,7 @@
 pipeline {
      agent {
         kubernetes {
-            label 'kuberL1'
+            label 'PodLabel1'
         }
     }
 
