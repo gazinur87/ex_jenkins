@@ -7,7 +7,7 @@ pipeline {
     stage ('stahe1') {
               steps {
                  container('container1') {
-              sh 'uname -a'
+              sh 'ps aux'
             }
         }
        
