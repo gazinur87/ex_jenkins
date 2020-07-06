@@ -37,8 +37,9 @@ pipeline {
     stages {
         stage('call') {
             steps {
-                echo "Hello World"
-              //  build job: 'subpipe'
+               container('busybox') {
+                   echo "Hello World busybox"
+                }
             }
         }
 
