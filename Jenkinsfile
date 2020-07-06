@@ -1,5 +1,5 @@
 pipeline {
-     agent {
+     agent 'dockerL1'
  
 
             
@@ -17,7 +17,7 @@ pipeline {
 //     command: ["cat"]
 //     tty: true
 // """
-    }
+    
 
     stages {
         stage('call') {
