@@ -5,9 +5,12 @@ pipeline {
   }
 	stages {
     stage ('stahe1') {
-         steps {
+      container('go-agent') {
+              steps {
               sh 'hostname'
             }
+        }
+       
 	}
 }
 }
