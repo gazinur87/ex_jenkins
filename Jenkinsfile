@@ -1,7 +1,6 @@
 pipeline {
      agent {
-        kubernetes {
-            label 'PodLabel2'
+            label 'kuberL1'
           //  defaultContainer 'busybox'
 //             yaml """
 // apiVersion: v1
@@ -16,7 +15,6 @@ pipeline {
 //     command: ["cat"]
 //     tty: true
 // """
-        }
     }
 
     //   parameters {
