@@ -2,7 +2,7 @@ pipeline {
      agent {
         kubernetes {
             label 'PodLabel2'
-            defaultContainer 'busybox'
+          //  defaultContainer 'busybox'
 //             yaml """
 // apiVersion: v1
 // kind: Pod
