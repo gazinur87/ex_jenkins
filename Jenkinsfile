@@ -1,8 +1,6 @@
 pipeline {
-     agent 'dockerL1'
+ agent 'dockerL1'
  
-
-            
           //  defaultContainer 'busybox'
 //             yaml """
 // apiVersion: v1
