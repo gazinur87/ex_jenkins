@@ -5,8 +5,8 @@ pipeline {
   }
 	stages {
     stage ('stahe1') {
-      container('container1') {
               steps {
+                 container('container1') {
               sh 'hostname'
             }
         }
