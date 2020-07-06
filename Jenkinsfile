@@ -2,6 +2,20 @@ pipeline {
      agent {
         kubernetes {
             label 'PodLabel2'
+            defaultContainer 'busybox'
+//             yaml """
+// apiVersion: v1
+// kind: Pod
+// metadata:
+//   labels:
+//     job: build-service
+// spec:
+//   containers:
+//   - name: busybox
+//     image: busybox
+//     command: ["cat"]
+//     tty: true
+// """
         }
     }
 
@@ -23,10 +37,9 @@ pipeline {
     stages {
         stage('call') {
             steps {
-          container('busybox') {
-            echo "Hello World"
-          }
-        }
+                echo "Hello World"
+              //  build job: 'subpipe'
+            }
         }
 
         // stage('Build') {
