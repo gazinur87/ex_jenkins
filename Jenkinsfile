@@ -6,7 +6,7 @@ pipeline {
 	stages {
     stage ('stahe1') {
               steps {
-                 container('container1') {
+                 container('jnlp') {
               sh 'sleep 10000'
             }
         }
