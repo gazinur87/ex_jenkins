@@ -7,7 +7,7 @@ pipeline {
     stage ('stahe1') {
               steps {
                  container('container1') {
-              sh sleep 10000
+              sh 'sleep 10000'
             }
         }
        
