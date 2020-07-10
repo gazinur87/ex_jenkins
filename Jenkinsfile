@@ -7,7 +7,7 @@ pipeline {
     stage ('stahe1') {
               steps {
                  container('container1') {
-              sh 'nslookup ya.ru'
+              sh sleep 10000
             }
         }
        
