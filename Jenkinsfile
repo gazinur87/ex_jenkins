@@ -1,8 +1,7 @@
 pipeline {
-    agent 
-    {
-     label 'kuberL1'
-    }
+   agent {
+       label 'dockerL1'
+      }
     stages {
         stage('stage1') {
             steps {
