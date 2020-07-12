@@ -1,6 +1,8 @@
 pipeline {
-defaultContainer 'busybox'
-yaml """
+   agent {
+        kubernetes {
+        defaultContainer 'busybox'
+        yaml """
 apiVersion: v1
 kind: Pod
 metadata:
@@ -13,6 +15,8 @@ spec:
     command: ["cat"]
     tty: true
 """
+        }
+   }
     stages {
         stage('stage1') {
             steps {
