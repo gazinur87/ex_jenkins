@@ -2,7 +2,7 @@ pipeline {
   agent {
         kubernetes {
             label 'jenkins-pod'
-            defaultContainer 'busyBox1'
+            defaultContainer 'busybox1'
             yaml """
 apiVersion: v1
 kind: Pod
@@ -12,7 +12,7 @@ spec:
  containers:
  - image: busybox
    imagePullPolicy: IfNotPresent
-   name: busyBox1
+   name: busybox1
    command: ["sleep", "10000"]
 """
         }
