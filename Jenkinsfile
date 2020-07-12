@@ -64,6 +64,7 @@ spec:
                     echo "${repo}"
                     echo repo.GIT_BRANCH.take(20).replaceAll('/', '_')
                 }
+                build job: './subpipe'
             }
         }
     }
