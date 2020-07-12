@@ -1,6 +1,7 @@
 pipeline {
    agent {
         kubernetes {
+        label 'build-service-pod'
         defaultContainer 'busybox'
         yaml """
 apiVersion: v1
